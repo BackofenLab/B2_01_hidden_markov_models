@@ -10,7 +10,7 @@ Lehrstuhl für Bioinformatik - Institut für Informatik - *http://www.bioinf.uni
 
 ### _Exercise 1 - Two kind of dice_
 
-A casino uses two kinds of dice: 98% of dice are fair and 2% are loaded. The loadd die has a probability of 0.5 to show number six and probability 0.1 for the numbers one to five.
+A casino uses two kinds of dice: 98% of dice are fair and 2% are loaded. The loaded die has a probability of 0.5 to show number six and probability 0.1 for the numbers one to five.
 
 **a)** When we pick up a die from a table at random, what is the probability of rolling a six?
 
@@ -19,7 +19,7 @@ A casino uses two kinds of dice: 98% of dice are fair and 2% are loaded. The loa
 **c)** How many sixes in a row would we need to roll to be at least 90% sure that the die is loaded?
 
 ### _Exercise 2 - The ocassionally dishonest casino_
-In a casiono they use a fair die most of the time, but occasionally they switch to a loaded die. The loaded die has a probability 0.5 to sow number six and probability 0.1 for th numbers one to five. Assume that the casiono switches from a fair to a loaded die with probability 0.05 before each roll, and that the probability of switching back is 0.1. The probability to tart a game with the fair die is 0.9.
+In a casino they use a fair die most of the time, but occasionally they switch to a loaded die. The loaded die has a probability 0.5 to show number six and probability 0.1 for the numbers one to five. Assume that the casiono switches from a fair to a loaded die with probability 0.05 before each roll, and that the probability of switching back is 0.1. The probability to start a game with the fair die is 0.9.
 
 **a)** Which of the following graphical representations depicts the above given explanation?
 
