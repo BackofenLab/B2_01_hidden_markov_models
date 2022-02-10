@@ -14,8 +14,8 @@ difficulty: Score from 0-10
             10 - The exercise/sheet is far too difficult. I am not able to solve it on my own.
 
 comment: (optional) Free text comment.
-            Please tell us what you liked and what you disliked.
-            Try to be civil and respectful, if there is an issue we will try our best to resolve it.
+         Please tell us what you liked and what you disliked.
+         Try to be civil and respectful, if there is an issue we will try our best to resolve it.
 ```
 
 #### Thank you for your help.
