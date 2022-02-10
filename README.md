@@ -4,7 +4,7 @@ Lehrstuhl für Bioinformatik - Institut für Informatik - *http://www.bioinf.uni
 
 ---
 ## Bioinformatics 2
-###### SS 2021/2022
+###### SS 2022
 ##### Exercise sheet 1: Hidden Markov models
 ---
 
