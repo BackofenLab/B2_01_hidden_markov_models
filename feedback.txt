@@ -15,7 +15,8 @@
 # comment: (optional) Free text comment.
 #          Please tell us what you liked and what you disliked.
 #          Try to be civil and respectful, if there is an issue we will try our best to resolve it.
-
+#
+# Thank you for your help.
 
 Exercise 1 - Two kind of dice
 -----------------------------
