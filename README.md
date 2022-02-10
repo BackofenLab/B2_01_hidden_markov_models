@@ -24,7 +24,7 @@ In a casino they use a fair die most of the time, but occasionally they switch t
 **a)** Which of the following graphical representations depicts the above given explanation?
 
 <p align="center">
-<img src="./figures/sheet01-exercise2-a-HMM.svg" alt="HMM" width=80%"/>
+<img src="./figures/sheet01-exercise2-a-HMM-alt.svg" alt="HMM" width=100%"/>
 </p>
 
 
