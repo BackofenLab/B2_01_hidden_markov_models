@@ -23,6 +23,11 @@ In a casino they use a fair die most of the time, but occasionally they switch t
 
 **a)** Which of the following graphical representations depicts the above given explanation?
 
+<p align="center">
+<img src="./figures/sheet01-exercise2-a-HMM.svg" alt="HMM" width=80%"/>
+</p>
+
+
 **b)** Given an observed sequence of outcomes O = 3661634 and two possible state sequences p<sub>1</sub> = LLLFFFF and p<sub>2</sub> = FFFFFFF (where F=fair and L=loaded), what are the joint probabilites Pr(O,p<sub>1</sub>) and Pr(O,p<sub>2</sub>) in the HMM described above?
 
 **c)** Give an observation O = 1662, how many possible state sequences exist in the described HMM?
