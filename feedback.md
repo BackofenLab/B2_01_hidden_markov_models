@@ -1,5 +1,4 @@
 # Feedback - Exercise session
-#### This is a feedback form.
 #### We ask you for your help to improve the quality of the exercise sheets.
 #### Please take a few minutes to fill out this form and give us feedback on the exercises.
 #### You are not going to be penilized for the negative feedback. 
