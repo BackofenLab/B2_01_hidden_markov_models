@@ -17,21 +17,21 @@ A casino uses two kinds of dice: 98% of dice are fair and 2% are loaded. The loa
 <details>
   <summary>Formulae: (Spoiler)</summary>
 <p align="center">
-<img src="./figures/solution_1_e1a.svg" alt="1a-formula" width="50%"/>
+<img src="./figures/solution_1_e1a.svg" alt="1a-formula" width="90%"/>
 </p>
 </details>
 
 <details>
   <summary>Calculation Method: (Spoiler)</summary>
 <p align="center">
-<img src="./figures/solution_2_e1a.svg" alt="1a-formula" width="50%"/>
+<img src="./figures/solution_2_e1a.svg" alt="1a-formula" width="90%"/>
 </p>
 </details>
 
 <details>
   <summary>Solution: (Spoiler)</summary>
 <p align="center">
-<img src="./figures/solution_3_e1a.svg" alt="1a-formula" width="50%"/>
+<img src="./figures/solution_3_e1a.svg" alt="1a-formula" width="90%"/>
 </p>
 </details>
 
@@ -39,21 +39,21 @@ A casino uses two kinds of dice: 98% of dice are fair and 2% are loaded. The loa
 <details>
   <summary>Formulae: (Spoiler)</summary>
 <p align="center">
-<img src="./figures/solution_1_e1b.svg" alt="1a-formula" width="50%"/>
+<img src="./figures/solution_1_e1b.svg" alt="1a-formula" width="90%"/>
 </p>
 </details>
 
 <details>
   <summary>Calculation Method: (Spoiler)</summary>
 <p align="center">
-<img src="./figures/solution_2_e1b.svg" alt="1a-formula" width="50%"/>
+<img src="./figures/solution_2_e1b.svg" alt="1a-formula" width="90%"/>
 </p>
 </details>
 
 <details>
   <summary>Solution: (Spoiler)</summary>
 <p align="center">
-<img src="./figures/solution_3_e1b.svg" alt="1a-formula" width="50%"/>
+<img src="./figures/solution_3_e1b.svg" alt="1a-formula" width="90%"/>
 </p>
 </details>
 
@@ -61,21 +61,21 @@ A casino uses two kinds of dice: 98% of dice are fair and 2% are loaded. The loa
 <details>
   <summary>Formulae: (Spoiler)</summary>
 <p align="center">
-<img src="./figures/solution_1_e1c.svg" alt="1a-formula" width="50%"/>
+<img src="./figures/solution_1_e1c.svg" alt="1a-formula" width="90%"/>
 </p>
 </details>
 
 <details>
   <summary>Calculation Method: (Spoiler)</summary>
 <p align="center">
-<img src="./figures/solution_2_e1c.svg" alt="1a-formula" width="50%"/>
+<img src="./figures/solution_2_e1c.svg" alt="1a-formula" width="90%"/>
 </p>
 </details>
 
 <details>
   <summary>Solution: (Spoiler)</summary>
 <p align="center">
-<img src="./figures/solution_3_e1c.svg" alt="1a-formula" width="50%"/>
+<img src="./figures/solution_3_e1c.svg" alt="1a-formula" width="90%"/>
 </p>
 </details>
 ### _Exercise 2 - The occasionally cheating casino_
