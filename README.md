@@ -84,55 +84,62 @@ In a casino they use a fair die most of the time, but occasionally they switch t
 **a)** Build the correct HMM graph. Match the letters from the blank figure to the numbers of the correct parts in the parts lists!
 
 <p align="center">
-<img src="./figures/sheet01-exercise2-a-HMM-intro.svg" alt="HMM" width=80%"/>
+<img src="./figures/sheet01-exercise2-a-HMM-intro.svg" alt="HMM" width=100%"/>
 </p>
 
 <details>
   <summary>Part List: A </summary>
 <p align="center">
-<img src="./figures/sheet01-exercise2-a-HMM-A.svg" alt="Parts-A" width="80%"/>
+<img src="./figures/sheet01-exercise2-a-HMM-A.svg" alt="Parts-A" width="100%"/>
 </p>
 </details>
 
 <details>
   <summary>Part List: B </summary>
 <p align="center">
-<img src="./figures/sheet01-exercise2-a-HMM-B.svg" alt="Parts-B" width="80%"/>
+<img src="./figures/sheet01-exercise2-a-HMM-B.svg" alt="Parts-B" width="100%"/>
 </p>
 </details>
 
 <details>
   <summary>Part List: C </summary>
 <p align="center">
-<img src="./figures/sheet01-exercise2-a-HMM-C.svg" alt="Parts-C" width="80%"/>
+<img src="./figures/sheet01-exercise2-a-HMM-C.svg" alt="Parts-C" width="100%"/>
 </p>
 </details>
 
 <details>
   <summary>Part List: D </summary>
 <p align="center">
-<img src="./figures/sheet01-exercise2-a-HMM-D.svg" alt="Parts-D" width="80%"/>
+<img src="./figures/sheet01-exercise2-a-HMM-D.svg" alt="Parts-D" width="100%"/>
 </p>
 </details>
 
 <details>
   <summary>Part List: E </summary>
 <p align="center">
-<img src="./figures/sheet01-exercise2-a-HMM-E.svg" alt="Parts-E" width="80%"/>
+<img src="./figures/sheet01-exercise2-a-HMM-E.svg" alt="Parts-E" width="100%"/>
 </p>
 </details>
 
 <details>
   <summary>Part List: F </summary>
 <p align="center">
-<img src="./figures/sheet01-exercise2-a-HMM-F.svg" alt="Parts-F" width="80s%"/>
+<img src="./figures/sheet01-exercise2-a-HMM-F.svg" alt="Parts-F" width="100%"/>
+</p>
+</details>
+
+<details>
+  <summary>Part List: G </summary>
+<p align="center">
+<img src="./figures/sheet01-exercise2-a-HMM-G.svg" alt="Parts-G" width="100%"/>
 </p>
 </details>
 
 <details>
   <summary> Solution (Spoiler) </summary>
 <p align="center">
-<img src="./figures/sheet01-exercise2-a-HMM-solution.svg" alt="HMM-solution" width="80%"/>
+<img src="./figures/sheet01-exercise2-a-HMM-solution.svg" alt="HMM-solution" width="100%"/>
 </p>
 </details>
 
