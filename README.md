@@ -8,7 +8,7 @@ Lehrstuhl für Bioinformatik - Institut für Informatik - *http://www.bioinf.uni
 ##### Exercise sheet 1: Hidden Markov models
 ---
 
-### _Exercise 1 - Two kind of dice_
+### _Exercise 1 - Two kinds of dice_
 
 A casino uses two kinds of dice: 98% of dice are fair and 2% are loaded. The loaded die has a probability of 0.5 to show number six and probability 0.1 for the numbers one to five.
 
