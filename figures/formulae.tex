@@ -13,10 +13,8 @@ $P(L|O) = 35.53\%$
 
 
 %Exercise 1c
-$\frac{P(O|L)*P(L)}{P(O|L)*P(L) + P(O|F)*P(F)} \geq 0.9$
+$P(L|O) = \frac{P(O|L)*P(L)}{P(O|L)*P(L) + P(O|F)*P(F)}$
 $\frac{\frac{2}{100}*(\frac{1}{2})^n}{\frac{2}{100}*(\frac{1}{2})^n + \frac{98}{100}*(\frac{1}{6})^n} \geq 0.9$
-$\frac{\frac{2}{100}*(\frac{1}{2})^n}{\frac{2}{100}*(\frac{1}{2})^n + \frac{98}{100}*(\frac{1}{6})^n} \geq \frac{9}{10}, \text{ with } n > 0$
-%Solution:
 \begin{alignat}{3}
 &\iff \frac{\frac{2}{100}*(\frac{1}{2})^n}{\frac{2}{100}*(\frac{1}{2})^n + \frac{98}{100}*(\frac{1}{2})^n * (\frac{1}{3})^n} &&\geq \frac{9}{10}  &&\quad| \text{ split } (\frac{1}{6})^n\\
 &\iff \frac{\frac{2}{100}*(\frac{1}{2})^n}{\frac{2}{100}*(\frac{1}{2})^n * (1 + 49 * (\frac{1}{3})^n)} &&\geq \frac{9}{10}  &&\quad| \text{ factorize}\\

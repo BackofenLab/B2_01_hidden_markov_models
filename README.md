@@ -58,7 +58,26 @@ A casino uses two kinds of dice: 98% of dice are fair and 2% are loaded. The loa
 </details>
 
 **c)** How many sixes in a row would we need to roll to be at least 90% sure that the die is loaded?
+<details>
+  <summary>Formulae: (Spoiler)</summary>
+<p align="center">
+<img src="./figures/solution_1_e1c.svg" alt="1a-formula" width="50%"/>
+</p>
+</details>
 
+<details>
+  <summary>Calculation Method: (Spoiler)</summary>
+<p align="center">
+<img src="./figures/solution_2_e1c.svg" alt="1a-formula" width="50%"/>
+</p>
+</details>
+
+<details>
+  <summary>Solution: (Spoiler)</summary>
+<p align="center">
+<img src="./figures/solution_3_e1c.svg" alt="1a-formula" width="50%"/>
+</p>
+</details>
 ### _Exercise 2 - The occasionally cheating casino_
 In a casino they use a fair die most of the time, but occasionally they switch to a loaded die. The loaded die has a probability 0.5 to show number six and probability 0.1 for the numbers one to five. Assume that the casino switches from a fair to a loaded die with probability 0.05 before each roll, and that the probability of switching back is 0.1. The probability to start a game with the fair die is 0.9.
 
