@@ -14,7 +14,48 @@ A casino uses two kinds of dice: 98% of dice are fair and 2% are loaded. The loa
 
 **a)** When we pick up a die from a table at random, what is the probability of rolling a six?
 
+<details>
+  <summary>Formulae: (Spoiler)</summary>
+<p align="center">
+<img src="./figures/solution_1_e1a.svg" alt="1a-formula" width="50%"/>
+</p>
+</details>
+
+<details>
+  <summary>Calculation Method: (Spoiler)</summary>
+<p align="center">
+<img src="./figures/solution_2_e1a.svg" alt="1a-formula" width="50%"/>
+</p>
+</details>
+
+<details>
+  <summary>Solution: (Spoiler)</summary>
+<p align="center">
+<img src="./figures/solution_3_e1a.svg" alt="1a-formula" width="50%"/>
+</p>
+</details>
+
 **b)** We pick up a die from a table at random and roll [6, 6, 6]. What is the probability, that the die is loaded?
+<details>
+  <summary>Formulae: (Spoiler)</summary>
+<p align="center">
+<img src="./figures/solution_1_e1b.svg" alt="1a-formula" width="50%"/>
+</p>
+</details>
+
+<details>
+  <summary>Calculation Method: (Spoiler)</summary>
+<p align="center">
+<img src="./figures/solution_2_e1b.svg" alt="1a-formula" width="50%"/>
+</p>
+</details>
+
+<details>
+  <summary>Solution: (Spoiler)</summary>
+<p align="center">
+<img src="./figures/solution_3_e1b.svg" alt="1a-formula" width="50%"/>
+</p>
+</details>
 
 **c)** How many sixes in a row would we need to roll to be at least 90% sure that the die is loaded?
 

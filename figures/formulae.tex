@@ -1,0 +1,31 @@
+% Exercise 1a
+$L = Loaded, F = Fair, O = Observation$
+
+$P(O) = P(F)* P(O|F)+ P(L) * P(O|L)$
+$P(6) = 0.98*1/6 + 0.02*1/2$
+$P(6) = 0.1733$
+
+
+% Exercise 1b
+$P(L|O) = \frac{P(L,O)}{P(O)}$
+$\frac{P(O|L)*P(L)}{P(O|L)*P(L) + P(O|F)*P(F)} = \frac{(1/2)^3*0.02}{(1/2)^3*0.02 + (1/6)^3*0.98}$
+$P(L|O) = 35.53\%$
+
+
+%Exercise 1c
+$\frac{P(O|L)*P(L)}{P(O|L)*P(L) + P(O|F)*P(F)} \geq 0.9$
+$\frac{\frac{2}{100}*(\frac{1}{2})^n}{\frac{2}{100}*(\frac{1}{2})^n + \frac{98}{100}*(\frac{1}{6})^n} \geq 0.9$
+$\frac{\frac{2}{100}*(\frac{1}{2})^n}{\frac{2}{100}*(\frac{1}{2})^n + \frac{98}{100}*(\frac{1}{6})^n} \geq \frac{9}{10}, \text{ with } n > 0$
+%Solution:
+\begin{alignat}{3}
+&\iff \frac{\frac{2}{100}*(\frac{1}{2})^n}{\frac{2}{100}*(\frac{1}{2})^n + \frac{98}{100}*(\frac{1}{2})^n * (\frac{1}{3})^n} &&\geq \frac{9}{10}  &&\quad| \text{ split } (\frac{1}{6})^n\\
+&\iff \frac{\frac{2}{100}*(\frac{1}{2})^n}{\frac{2}{100}*(\frac{1}{2})^n * (1 + 49 * (\frac{1}{3})^n)} &&\geq \frac{9}{10}  &&\quad| \text{ factorize}\\
+&\iff \frac{1}{1 + 49 * (\frac{1}{3})^n} &&\geq \frac{9}{10} &&\quad| \text{ simplify, given } n > 0\\
+&\iff \frac{9}{10} (1 + 49 * (\frac{1}{3})^n) &&\leq 1  &&\quad| \text{ cross-multiply, given } n > 0\\
+&\iff (\frac{1}{3})^n &&\leq \frac{1}{441} &&\quad| \text{ rewrite }\\
+&\iff n * ln(\frac{1}{3}) &&\leq ln(\frac{1}{441}) &&\quad| \text{ ln() }\\
+&\iff n &&\leq \frac{ln(\frac{1}{441})}{ln(\frac{1}{3})} &&\quad| *\frac{1}{ln(\frac{1}{3})} \\
+&\iff -5.542487... &&\leq n &&\quad| * (-1)\\
+&\iff n &&\geq 5.542487...
+\end{alignat}
+$n = 6$ as only Integers make sense here (just trying would also work)
