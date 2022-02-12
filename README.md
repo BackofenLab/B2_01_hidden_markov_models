@@ -82,9 +82,6 @@ A casino uses two kinds of dice: 98% of dice are fair and 2% are loaded. The loa
 <<<<<<< HEAD
 ### _Exercise 2 - The occasionally cheating casino_ <img src="./figures/loaded_die.svg" alt="l_die" width="5%"/>
 
-=======
-### _Exercise 2 - The occasionally cheating casino_
->>>>>>> e8d6a2026ae7e178abd9b3babf2e013d7c718d75
 In a casino they use a fair die most of the time, but occasionally they switch to a loaded die. The loaded die has a probability 0.5 to show number six and probability 0.1 for the numbers one to five. Assume that the casino switches from a fair to a loaded die with probability 0.05 before each roll, and that the probability of switching back is 0.1. The probability to start a game with the fair die is 0.9.
 
 **a)** Build the correct HMM graph. Match the letters from the blank figure to the numbers of the correct parts in the parts lists!
