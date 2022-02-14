@@ -212,7 +212,7 @@ loaded_die = Die(0.1, 0.1, 0.1, 0.1, 0.1, 0.5)
 casino_dice = [(fair_die, 0.98), (loaded_die, 0.02)]
 ```
 
-**a)** Implement the function `roll_proba_given_dice` which takes a `list of dice` and a `roll` value and returns the `probability of the roll`. A roll is a singe value which can be obtained by throwing a die once.
+**a)** Implement the function `roll_proba_given_dice` which takes a `list of dice` and a `roll` value and returns the `probability of the roll`. A roll is a single value which can be obtained by throwing a die once.
 
 **b)** Implement the function `observation_given_die` which takes a `list of dice` and an `observation` and returns the `probability of the observation`. 
 
@@ -222,4 +222,4 @@ casino_dice = [(fair_die, 0.98), (loaded_die, 0.02)]
 
 **f)** Implement the function `observation_probability_computation_given_state_sequence` which takes a `list of dice`, an `observation` and a `state sequence` and returns the `probability of the given observation`.
 
-**g)** Implement the function `observation_state_sequence_joint_probability_computation_correct` which takes a list of dice, an `observation` and a `state sequence` and return the joint probability of the observation and the state sequence.
+**g)** Implement the function `observation_state_sequence_joint_probability_computation` which takes a list of dice, an `observation` and a `state sequence` and return the joint probability of the observation and the state sequence.
