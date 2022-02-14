@@ -23,9 +23,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="0.5"
-     inkscape:cx="387"
-     inkscape:cy="63"
+     inkscape:zoom="1.4142136"
+     inkscape:cx="198.34345"
+     inkscape:cy="216.02112"
      inkscape:window-width="1848"
      inkscape:window-height="1016"
      inkscape:window-x="72"
@@ -793,7 +793,7 @@
          id="tspan79871"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5.64444px;font-family:Arial;-inkscape-font-specification:'Arial Bold';stroke-width:0.264583"
          x="7.5990343"
-         y="47.45034">State Sequence vs Observations:</tspan></text>
+         y="47.45034">Observation vs State Sequence:</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.23333px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial Bold';letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
