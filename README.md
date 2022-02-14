@@ -145,7 +145,7 @@ In a casino they use a fair die most of the time, but occasionally they switch t
 </p>
 </details>
 
-**b)** Given an observed sequence of outcomes O = 3661634 and two possible state sequences p<sub>1</sub> = LLLFFFF and p<sub>2</sub> = FFFFFFF (where F=fair and L=loaded), what are the joint probabilites Pr(O,p<sub>1</sub>) and Pr(O,p<sub>2</sub>) in the HMM described above?
+**b)** Given an observed sequence of outcomes O = 3661634 and two possible state sequences p<sub>1</sub> = LLLFFFF and p<sub>2</sub> = FFFFFFF (where F=fair and L=loaded), what are the joint probabilites P(O,p<sub>1</sub>) and P(O,p<sub>2</sub>) in the HMM described above?
 <details>
   <summary>Formulae: (Spoiler)</summary>
 <p align="center">
