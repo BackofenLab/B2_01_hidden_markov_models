@@ -147,7 +147,38 @@ In a casino they use a fair die most of the time, but occasionally they switch t
 </details>
 
 **b)** Given an observed sequence of outcomes O = 3661634 and two possible state sequences p<sub>1</sub> = LLLFFFF and p<sub>2</sub> = FFFFFFF (where F=fair and L=loaded), what are the joint probabilites Pr(O,p<sub>1</sub>) and Pr(O,p<sub>2</sub>) in the HMM described above?
+<details>
+  <summary>Formulae: (Spoiler)</summary>
+<p align="center">
+<img src="./figures/solution_1_e2b.svg" alt="1a-formula" width="90%"/>
+</p>
+</details>
+
+<details>
+  <summary>Calculation Method: (Spoiler)</summary>
+<p align="center">
+<img src="./figures/solution_2_e2b.svg" alt="1a-formula" width="90%"/>
+</p>
+</details>
+
+<details>
+  <summary>Solution: (Spoiler)</summary>
+<p align="center">
+<img src="./figures/solution_3_e2b.svg" alt="1a-formula" width="90%"/>
+</p>
+</details>
 
 **c)** Give an observation O = 1662, how many possible state sequences exist in the described HMM?
+<details>
+  <summary>Calculation Method: (Spoiler)</summary>
+The actual observation does not matter in this case because all emission probabilities are > 0.
+Thus there are 2⁴ possible state sequences
+</details>
+
+<details>
+  <summary> Solution (Spoiler) </summary>
+16 possible state sequences
+</details>
+
 
 ### _Exercise 3 - Programming Assignment_
