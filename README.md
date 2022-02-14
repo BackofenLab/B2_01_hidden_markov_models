@@ -185,7 +185,7 @@ Thus there are 2⁴ possible state sequences
 
 
 ### _Exercise 3 - Programming Assignment_
-In this exercise you will be working with dice: namely probabilities of different rolls, outcomes, state sequences etc.
+In this exercise you will be working with dice: namely probabilities of different rolls, observations, state sequences etc.
 In order to make your experience better we implemented a Die class for you.
 
 You can create a die by simply providing the probabilities of the corresponding edges.
