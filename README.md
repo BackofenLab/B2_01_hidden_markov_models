@@ -37,7 +37,7 @@ A casino uses two kinds of dice: 98% of dice are fair and 2% are loaded. The loa
 </p>
 </details>
 
-**b)** We pick up a die from a table at random and roll [6, 6, 6]. What is the probability, that the die is loaded?
+**b)** We pick up a die from a table at random and roll [&#9861; &#9861; &#9861;]. What is the probability, that the die is loaded?
 <details>
   <summary>Formulae: (Spoiler)</summary>
 <p align="center">
@@ -215,6 +215,8 @@ loaded_die = Die(0.1, 0.1, 0.1, 0.1, 0.1, 0.5)
 
 casino_dice = [(fair_die, 0.98), (loaded_die, 0.02)]
 ```
+
+<img src="./figures/sheet01-exercise3-intro.svg" alt="intro" width="70%"/>
 
 **a)** Implement the function `roll_proba_given_dice` which takes a `list of dice` and a `roll` value and returns the `probability of the roll`. A roll is a single value which can be obtained by throwing a die once.
 
