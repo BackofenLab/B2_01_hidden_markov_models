@@ -57,18 +57,18 @@ def proba_of_dice_given_observation_correct(list_dice, observation):
         return list_dice_proba
 
 
-def path_probability_computation_correct(list_dice, path, transition_matrix):
-    path_probability = list_dice[int(path[0])][1]
-    for node1, node2 in zip(path, path[1:]):
+def state_sequence_probability_computation_correct(list_dice, state_sequence, transition_matrix):
+    state_sequence_probability = list_dice[int(state_sequence[0])][1]
+    for node1, node2 in zip(state_sequence, state_sequence[1:]):
         node1, node2 = int(node1), int(node2)
         trans_proba = transition_matrix[node1][node2]
-        path_probability *= trans_proba
-    return path_probability
+        state_sequence_probability *= trans_proba
+    return state_sequence_probability
 
 
-def observation_probability_computation_given_path_correct(list_dice, observation, path):
+def observation_probability_computation_given_state_sequence_correct(list_dice, observation, state_sequence):
     observation_probability = 1
-    for roll, node in zip(observation, path):
+    for roll, node in zip(observation, state_sequence):
         die = list_dice[int(node)][0]
         roll_proba = die[str(roll)]
         observation_probability *= roll_proba
@@ -76,10 +76,10 @@ def observation_probability_computation_given_path_correct(list_dice, observatio
     return observation_probability
 
 
-def observation_path_joint_probability_computation_correct(list_dice, observation, path):
-    path_proba = path_probability_computation_correct(list_dice, observation, path)
-    obserbation_proba = observation_probability_computation_given_path_correct(list_dice, observation, path)
-    return path_proba * obserbation_proba
+def observation_state_sequence_joint_probability_computation_correct(list_dice, observation, state_sequence):
+    state_sequence_proba = state_sequence_probability_computation_correct(list_dice, observation, state_sequence)
+    obserbation_proba = observation_probability_computation_given_state_sequence_correct(list_dice, observation, state_sequence)
+    return state_sequence_proba * obserbation_proba
 
 
 def main():
@@ -88,7 +88,7 @@ def main():
     print(die.fair)
     print(die["1"])
     print(die[0])
-    print(observation_given_die_correct(die, [1, 1, 1, 2]))
+    print(observation_given_die_correct(die, ["1", "1", "1", "2"]))
 
     fair_die = Die(1/6, 1/6, 1/6, 1/6, 1/6, 1/6)
     loaded_die = Die(0.1, 0.1, 0.1, 0.1, 0.1, 0.5)
@@ -99,12 +99,12 @@ def main():
 
     casino_dice = [(fair_die, 0.9), (loaded_die, 0.1)]
     transition_casino = [[0.95, 0.05], [0.1, 0.9]]
-    path = "1110000"
-    path_proba = path_probability_computation_correct(casino_dice, path, transition_casino)
-    print(path_proba)
+    state_sequence = "1110000"
+    state_sequence_proba = state_sequence_probability_computation_correct(casino_dice, state_sequence, transition_casino)
+    print(state_sequence_proba)
 
     observation = "3661634"
-    observation_proba = observation_probability_computation_given_path_correct(casino_dice, observation, path)
+    observation_proba = observation_probability_computation_given_state_sequence_correct(casino_dice, observation, state_sequence)
     print(observation_proba)
 
 
