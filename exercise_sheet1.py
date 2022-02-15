@@ -58,13 +58,8 @@ def exercise_2a():
     partListF = None
     partListG = None
 
-    return(partListA,
-           partListB,
-           partListC,
-           partListD,
-           partListE,
-           partListF,
-           partListG)
+    solution = [partListA,partListA,partListA,partListA,partListA,partListA,partListA]
+    return(solution)
     
     
 def exercise_2b():
