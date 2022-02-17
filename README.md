@@ -9,9 +9,8 @@ Lehrstuhl für Bioinformatik - Institut für Informatik - *http://www.bioinf.uni
 ---
 
 ### _Exercise 1 - Two kinds of dice_
-<p align="center">
-<img src="./figures/Dice-E1.png" alt="die" width="35%"/>
-</p>
+
+<img src="./figures/Dice-E1.png" alt="die"/>
 
 A casino uses two kinds of dice: 98% of dice are fair and 2% are loaded. The loaded die has a probability of 0.5 to show number six and probability 0.1 for the numbers one to five.
 
