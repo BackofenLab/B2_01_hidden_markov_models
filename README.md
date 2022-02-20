@@ -222,6 +222,7 @@ casino_dice = [(fair_die, 0.98), (loaded_die, 0.02)]
 **a)** Implement the function `roll_proba_given_dice` which takes a `list of dice` and a `roll` value and returns the `probability of the roll`. A roll is a single value which can be obtained by throwing a die once.
                                                                         
 <details>
+  <summary>Example: (Spoiler)</summary>                                                                      
   ```
    >>> die = Die(1/6, 1/6, 1/6, 1/6, 1/6, 1/6)
    >>>roll_proba_given_dice(die, "6") 
