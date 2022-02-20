@@ -226,7 +226,7 @@ casino_dice = [(fair_die, 0.98), (loaded_die, 0.02)]
                                                                         
   ```
    >>> die = Die(1/6, 1/6, 1/6, 1/6, 1/6, 1/6)
-   >>>roll_proba_given_dice(die, "6") 
+   >>> roll_proba_given_dice(die, "6") 
   0.1666666666666667
   ```
 
