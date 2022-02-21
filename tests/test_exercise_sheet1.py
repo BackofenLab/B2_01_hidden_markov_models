@@ -34,7 +34,7 @@ def test_exercise_1c():
     For details check README spoilers.
     """
     response = exercise_1c()
-    solution = 5.542487
+    solution = 6
     assert isclose(response, solution, abs_tol=1e-3)
 
 
