@@ -1,8 +1,14 @@
+from __future__ import division
+from math import isclose, prod
 import pytest
-import math
-import helpers
-
+from random import seed
+from helpers.helpers import *
 from exercise_sheet1 import *
+
+seed(10)
+
+N_TESTS = 10
+DICE_PROBABILITIES = [1/10,1/10,1/10,2/10,2/10,3/10]
 
 def test_exercise_1a():
     """
@@ -10,7 +16,7 @@ def test_exercise_1a():
     """
     response = exercise_1a()
     solution = 0.98 * (1/6) + 0.02 * 0.5
-    assert math.isclose(response,solution,abs_tol=1e-3)
+    assert isclose(response,solution,abs_tol=1e-3)
 
 def test_exercise_1b():
     """
@@ -18,7 +24,7 @@ def test_exercise_1b():
     """
     response = exercise_1b()
     solution = (0.5**3*0.02)/(0.5**3*0.02+(1/6)**3*0.98)
-    assert math.isclose(response,solution,abs_tol=1e-3)
+    assert isclose(response,solution,abs_tol=1e-3)
 
 def test_exercise_1c():
     """
@@ -26,7 +32,7 @@ def test_exercise_1c():
     """
     response = exercise_1c()
     solution = 5.542487
-    assert math.isclose(response,solution,abs_tol=1e-3)
+    assert isclose(response,solution,abs_tol=1e-3)
 
 def test_exercise_2a():
     """
@@ -51,12 +57,12 @@ def test_exercise_2c():
     response = int(exercise_2c())
     solution = 16
     assert response == solution
-
+    
 def test_exercise_3a():
     """
     For details check README.
     """
-
+    
 def test_exercise_3b():
     """
     For details check README.
