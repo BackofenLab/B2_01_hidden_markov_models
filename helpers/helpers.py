@@ -76,10 +76,10 @@ def observation_probability_computation_given_state_sequence_correct(list_dice, 
     return observation_probability
 
 
-def observation_state_sequence_joint_probability_computation_correct(list_dice, observation, state_sequence):
-    state_sequence_proba = state_sequence_probability_computation_correct(list_dice, observation, state_sequence)
-    obserbation_proba = observation_probability_computation_given_state_sequence_correct(list_dice, observation, state_sequence)
-    return state_sequence_proba * obserbation_proba
+def observation_state_sequence_joint_probability_computation_correct(list_dice, observation, state_sequence,transition_matrix):
+    state_sequence_proba = state_sequence_probability_computation_correct(list_dice, state_sequence, transition_matrix)
+    observation_proba = observation_probability_computation_given_state_sequence_correct(list_dice, observation, state_sequence)
+    return state_sequence_proba * observation_proba
 
 
 def main():

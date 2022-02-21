@@ -240,4 +240,4 @@ casino_dice = [(fair_die, 0.98), (loaded_die, 0.02)]
 
 **e)** Implement the function `observation_probability_computation_given_state_sequence` which takes a `list of dice`, an `observation` and a `state sequence` and returns the `probability of the given observation`.
 
-**f)** Implement the function `observation_state_sequence_joint_probability_computation` which takes a `list of dice`, an `observation` and a `state sequence` and return the joint probability of the observation and the state sequence.
+**f)** Implement the function `observation_state_sequence_joint_probability_computation` which takes a `list of dice`, an `observation`, a `state sequence` and a `transition matrix` and return the joint probability of the observation and the state sequence.

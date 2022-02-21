@@ -77,7 +77,7 @@ def exercise_2b():
     """
     probability_0p1 = None
     prabability_0p2 = None
-    return([probability_0p1,probability_0p2])
+    return([probability_0p1,prabability_0p2])
 
 def exercise_2c():
     """
@@ -148,7 +148,7 @@ def observation_given_die(die, observation):
     return observation_proba
 
 
-def proba_of_dice_given_observation_correct(list_dice, observation):
+def proba_of_dice_given_observation(list_dice, observation):
     """
     Exercise 3 c
     
@@ -159,7 +159,7 @@ def proba_of_dice_given_observation_correct(list_dice, observation):
     list_dice_proba = None
     return list_dice_proba
 
-def state_sequence_probability_computation_correct(list_dice, state_sequence, transition_matrix):
+def state_sequence_probability_computation(list_dice, state_sequence, transition_matrix):
     """
     Exercise 3 d
     
@@ -171,7 +171,7 @@ def state_sequence_probability_computation_correct(list_dice, state_sequence, tr
     return state_sequence_probability
 
 
-def observation_probability_computation_given_state_sequence_correct(list_dice, observation, state_sequence):
+def observation_probability_computation_given_state_sequence(list_dice, observation, state_sequence):
     """
     Exercise 3 e
     
@@ -182,14 +182,14 @@ def observation_probability_computation_given_state_sequence_correct(list_dice, 
     observation_probability = None
     return observation_probability
 
-def observation_state_sequence_joint_probability_computation_correct(list_dice, observation, state_sequence):
+def observation_state_sequence_joint_probability_computation(list_dice, observation, state_sequence, transition_matrix):
     """
     Exercise 3 f
     
     Implement the function observation_state_joint_probability which takes 
-    a list of dice, an observation and a state sequence and return the joint 
+    a list of dice, an observation, a state sequence and a transition matrix, and return the joint 
     probability of the observation and the state sequence.
     """
     state_sequence_proba = None
     obserbation_proba = None
-    return state_sequence_proba * obserbation_proba
+    return None #state_sequence_proba * obserbation_proba
