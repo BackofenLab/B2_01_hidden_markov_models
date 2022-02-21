@@ -33,7 +33,7 @@ def test_exercise_2a():
     For details check README.
     """
     response = [int(x) for x in exercise_2a()]
-    solution = [2,6,5,5,1,1,3]
+    solution = [2,6,4,5,1,1,5]
     assert response == solution
 
 def test_exercise_2b():
@@ -61,24 +61,23 @@ def test_exercise_3b():
     """
     For details check README.
     """
-
+    
 def test_exercise_3c():
     """
     For details check README.
     """
-
+    
 def test_exercise_3d():
     """
     For details check README.
     """
-
+    
 def test_exercise_3e():
     """
     For details check README.
     """
-
+    
 def test_exercise_3f():
     """
     For details check README.
     """
-
