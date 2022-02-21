@@ -76,8 +76,8 @@ def exercise_2b():
     P(O,p1) and P(O,p2) in the HMM described above?
     """
     probability_0p1 = None
-    prabability_0p2 = None
-    return([probability_0p1,prabability_0p2])
+    probability_0p2 = None
+    return([probability_0p1,probability_0p2])
 
 def exercise_2c():
     """
