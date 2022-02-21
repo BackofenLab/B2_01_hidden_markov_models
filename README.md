@@ -186,7 +186,7 @@ Thus there are 2⁴ possible state sequences
 
 
 ### _Exercise 3 - Programming Assignment_
-In this exercise you will be working with dice: namely probabilities of different rolls, observations, state sequences etc.
+In this exercise you will be working with dice: namely probabilities of different rolls, observations, state sequences, etc.
 In order to make your experience better we implemented a Die class for you.
 
 You can create a die by simply providing the probabilities of the corresponding edges.
@@ -240,4 +240,4 @@ casino_dice = [(fair_die, 0.98), (loaded_die, 0.02)]
 
 **e)** Implement the function `observation_probability_computation_given_state_sequence` which takes a `list of dice`, an `observation` and a `state sequence` and returns the `probability of the given observation`.
 
-**f)** Implement the function `observation_state_sequence_joint_probability_computation` which takes a list of dice, an `observation` and a `state sequence` and return the joint probability of the observation and the state sequence.
+**f)** Implement the function `observation_state_sequence_joint_probability_computation` which takes a `list of dice`, an `observation` and a `state sequence` and return the joint probability of the observation and the state sequence.

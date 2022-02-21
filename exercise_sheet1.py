@@ -1,3 +1,9 @@
+#!/user/bin/python3
+
+from __future__ import division
+from math import prod
+
+
 
 # Exercise 1: Two kinds of dice
 ###############################
@@ -71,7 +77,7 @@ def exercise_2b():
     """
     probability_0p1 = None
     prabability_0p2 = None
-    return(probability_0p1,probability_0p2)
+    return([probability_0p1,probability_0p2])
 
 def exercise_2c():
     """
@@ -120,80 +126,119 @@ For example:
     > casino_dice = [(fair_die, 0.98), (loaded_die, 0.02)]
 """
 
-def roll_proba_given_dice(list_of_dice,roll):
-    """
-    Exercise 3 a
+class Die:
+    def __init__(self,P1,P2,P3,P4,P5,P6):
+        self.P1 = P1
+        self.P2 = P2
+        self.P3 = P3
+        self.P4 = P4
+        self.P5 = P5
+        self.P6 = P6
+        self.probabilities = [P1,P2,P3,P4,P5,P6]
+        
+    def show_probabilities(self):
+        p = [self.P1,self.P2,self.P3,self.P4,self.P5,self.P6]
+        for i,j in enumerate(p):
+            print("\t[-] P({})={}".format(i+1,j))
 
-    Implement the function roll_proba_given_dice which takes a list of dice and a roll value 
-    and returns the probability of the roll. A roll is a single value which can be obtained 
-    by throwing a die once.
-    """
-    
-    probability_of_roll = None
-    
-    return(probability_of_roll)
+    def roll_prob(self,roll):
+        """
+        Exercise 3 a
 
-def observation_given_die(list_of_dice,observation):
-    """
-    Exercise 3 b
-    
-    Implement the function observation_given_die which takes a list of dice and an observation 
-    and returns the probability of the observation.
-    """
-    
-    probability_observation = None
+        Implement the function roll_proba_given_dice which takes a list of dice and 
+        a roll value and returns the probability of the roll. A roll is a single value 
+        which can be obtained by throwing a die once.
+        """
+        if isinstance(roll,int):
+            return(self.probabilities[roll])
+        else:
+            return(self.probabilities[int(roll)-1])
 
-    return(probability_observation)
+class Casino:
+    def __init__(self):
+        self.dice = []
+        self.n = 0
+        
+    def add(self,Die):
+        self.dice.append(Die)
+        self.n+=1
 
-def proba_of_dice_given_observation(list_of_dice,observation):
-    """
-    Exercise 3 c
+    def show(self):
+        for i, j in enumerate(self.dice):
+            print("[+] Die {}:".format(i)); j.show_probabilities()
+        
+    def prob_observ_given_dice(self,observation):
+        """
+        Exercise 3 b
     
-    Implement the function proba_of_dice_given_observation which takes a list of dice and an 
-    observation and returns the probability for each die to be used to have the corresponding outcome.
-    """
+        Implement the function prob_observ_given_die which using the list of 
+        dice and an observation and returns the probability of the observation.
+        """
+        probabilities = []
+        for i in observation:
+            prob_obs = sum([self.dice[j].roll_prob(i) * 1/self.n for j in range(self.n)])
+            probabilities.append(prob_obs)
+        return(prod(probabilities))
 
-    probability_each_die = None
+    def prob_die_given_observ(self,observation):
+        """
+        Exercise 3 c
     
-    return(probability_each_die)
+        Implement the function proba_of_dice_given_observation which takes a list of 
+        dice and an observation and returns the probability for each die to be used to 
+        have the corresponding outcome.
+        """
+        probability_each_die = []
+        for die in self.dice:
+            obs_prob = []
+            for i in observation:
+                obs_prob.append(die.roll_prob(i)*(1/self.n)/self.prob_observ_given_dice(i))
+            probability_each_die.append(prod(obs_prob))
+        return(probability_each_die)
 
-
-def state_sequence_probability_computation(list_of_dice,state_sequence,transition_matrix):
-    """
-    Exercise 3 d
+    def state_sequence_probability(state_sequence,transition_matrix):
+        """
+        Exercise 3 d
     
-    Implement the function state_sequence_probability_computation which takes a list of dice, 
-    a state sequence and the corresponding transition matrix for the given dice and returns 
-    the probability of the state sequence.
-    """
+        Implement the function state_sequence_probability_computation which takes a 
+        list of dice, a state sequence and the corresponding transition matrix for 
+        the given dice and returns the probability of the state sequence.
+        """
 
-    probability_state_sequence = None
-
-    return(probability_state_sequence)
+        probability_state_sequence = None
+        return(probability_state_sequence)
     
 
-def observation_probability_computation_given_state_sequence(list_of_dice,observation,state_sequence):
-    """
-    Exercise 3 e
+    def prob_observ_given_state(observation,state_sequence):
+        """
+        Exercise 3 e
     
-    Implement the function state_sequence_probability_computation which takes a list of dice, 
-    a state sequence and the corresponding transition matrix for the given dice and returns 
-    the probability of the state sequence.
-    """
+        Implement the function state_sequence_probability_computation which takes a 
+        list of dice, a state sequence and the corresponding transition matrix for 
+        the given dice and returns the probability of the state sequence.
+        """
 
-    probability_of_the_given_observation = None
-    
-    return(probability_of_the_given_observation)
+        probability_of_the_given_observation = None
+        return(probability_of_the_given_observation)
 
-def observation_state_sequence_joint_probability_computation(list_of_dice,observation,state_sequence):
-    """
-    Exercise 3 f
+    def observ_state_joint_probability(observation,state_sequence):
+        """
+        Exercise 3 f
     
-    Implement the function observation_state_sequence_joint_probability_computation which takes 
-    a list of dice, an observation and a state sequence and return the joint probability of 
-    the observation and the state sequence.
-    """
+        Implement the function observation_state_joint_probability which takes 
+        a list of dice, an observation and a state sequence and return the joint 
+        probability of the observation and the state sequence.
+        """
     
-    join_probability_observation,state_sequence = None
-    
-    return(join_probability_observation,state_sequence)
+        join_probability_observation,state_sequence = None
+        return(join_probability_observation,state_sequence)
+
+if __name__ == "__main__":
+    dice1 = Die(1/6,1/6,1/6,1/6,1/6,1/6)
+    dice2 = Die(1/2,1/10,1/10,1/10,1/10,1/10)
+    casino = Casino()
+    casino.add(dice1)
+    casino.add(dice2)
+    casino.show()
+    print(casino.prob_observ_given_dice("12"))
+    print(casino.prob_die_given_observ("12"))
