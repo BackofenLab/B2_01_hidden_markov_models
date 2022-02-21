@@ -80,7 +80,7 @@ def test_exercise_3a():
         response = roll_proba_given_dice(casino_dice, roll)
         solution = roll_proba_given_dice_correct(casino_dice, roll)
         if response is None:
-            print("[x] It seems that you didn't implemented the function!")
+            print("[x] It seems that you haven't implemented the function!")
             break
         if solution != response:
             print("[x] It seems that your implementation is wrong.")
@@ -103,7 +103,7 @@ def test_exercise_3b():
         response = observation_given_die(die, observation)
         solution = observation_given_die_correct(die, observation)
         if response is None:
-            print("[x] It seems that you didn't implemented the function!")
+            print("[x] It seems that you haven't implemented the function!")
             break
         if solution != response:
             print("[x] It seems that your implementation is wrong.")
@@ -129,7 +129,7 @@ def test_exercise_3c():
         response = proba_of_dice_given_observation(casino_dice, observation)
         solution = proba_of_dice_given_observation_correct(casino_dice, observation)
         if response is None:
-            print("[x] It seems that you didn't implemented the function!")
+            print("[x] It seems that you haven't implemented the function!")
             break
         if solution != response:
             print("[x] It seems that your implementation is wrong.")
@@ -162,7 +162,7 @@ def test_exercise_3d():
             casino_dice, state_sequence, transition
         )
         if response is None:
-            print("[x] It seems that you didn't implemented the function!")
+            print("[x] It seems that you haven't implemented the function!")
             break
         if solution != response:
             print("[x] It seems that your implementation is wrong.")
@@ -195,7 +195,7 @@ def test_exercise_3e():
             casino_dice, observation, state_sequence
         )
         if response is None:
-            print("[x] It seems that you didn't implemented the function!")
+            print("[x] It seems that you haven't implemented the function!")
             break
         if solution != response:
             print("[x] It seems that your implementation is wrong.")
@@ -231,7 +231,7 @@ def test_exercise_3f():
             casino_dice, observation, state_sequence, transition
         )
         if response is None:
-            print("[x] It seems that you didn't implemented the function!")
+            print("[x] It seems that you haven't implemented the function!")
             break
         if solution != response:
             print("[x] It seems that your implementation is wrong.")
