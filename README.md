@@ -225,9 +225,10 @@ casino_dice = [(fair_die, 0.98), (loaded_die, 0.02)]
   <summary>Example: (Spoiler)</summary>
 
   ```
-   >>> die = Die(1/6, 1/6, 1/6, 1/6, 1/6, 1/6)
-   >>> roll_proba_given_dice(die, "6")
-  0.1666666666666667
+   >>> fair_die = Die(1/6, 1/6, 1/6, 1/6, 1/6, 1/6)
+   >>> loaded_die = Die(1/10, 1/10, 1/10, 1/10, 1/10, 1/2)
+   >>> roll_proba_given_dice([(fair_die, 0.1), (loaded_die, 0.9)], "6")
+  0.4666666666666667
   ```
 
 </details>
