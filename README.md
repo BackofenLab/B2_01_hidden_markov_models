@@ -220,24 +220,63 @@ casino_dice = [(fair_die, 0.98), (loaded_die, 0.02)]
 <img src="./figures/sheet01-exercise3-intro.svg" alt="intro" width="70%"/>
 
 **a)** Implement the function `roll_proba_given_dice` which takes a `list of dice` and a `roll` value and returns the `probability of the roll`. A roll is a single value which can be obtained by throwing a die once.
-                                                                        
+
 <details>
-  <summary>Example: (Spoiler)</summary> 
-                                                                        
+  <summary>Example: (Spoiler)</summary>
+
   ```
    >>> die = Die(1/6, 1/6, 1/6, 1/6, 1/6, 1/6)
-   >>> roll_proba_given_dice(die, "6") 
+   >>> roll_proba_given_dice(die, "6")
   0.1666666666666667
   ```
 
-</details>                                                                        
+</details>
 
 **b)** Implement the function `observation_given_die` which takes a `list of dice` and an `observation` and returns the `probability of the observation`.
 
+<details>
+  <summary>Example: (Spoiler)</summary>
+
+</details>
+
 **c)** Implement the function `proba_of_dice_given_observation` which takes a `list of dice` and an `observation` and returns the `probability for each die` to be used to have the corresponding outcome.
+
+<details>
+  <summary>Example: (Spoiler)</summary>
+
+</details>
 
 **d)** Implement the function `state_sequence_probability_computation` which takes a `list of dice`, a `state sequence` and the corresponding `transition matrix` for the given dice and returns the `probability of the state sequence`.
 
+<details>
+  <summary>Example: (Spoiler)</summary>
+
+</details>
+
 **e)** Implement the function `observation_probability_computation_given_state_sequence` which takes a `list of dice`, an `observation` and a `state sequence` and returns the `probability of the given observation`.
 
+<details>
+  <summary>Example: (Spoiler)</summary>
+
+</details>
+
 **f)** Implement the function `observation_state_sequence_joint_probability_computation` which takes a `list of dice`, an `observation`, a `state sequence` and a `transition matrix` and return the joint probability of the observation and the state sequence.
+
+<details>
+  <summary>Example: (Spoiler)</summary>
+
+</details>
+
+------------------
+
+### _:exclamation::exclamation:Your feedback is needed:exclamation::exclamation:_
+
+Please fill in and commit the feedback form provided in your GitHub repository [`feedback.md`](feedback.md).
+
+Both positive and negative feedback about the exercise sheet and the lecture are welcome and will help us improve the lecture for you and future students.
+
+Tell us what you liked and what annoyed you. All feedback will be considered and treated confidentially.
+
+Thank you for your help! :heart:
+
+------------------
