@@ -1,0 +1,64 @@
+{
+"tests": [
+  {
+    "name": "Exercise 3 - Programming assignment: item a",
+    "setup": "",
+    "run": "pytest -s --no-header --tb=no ./tests/test_exercise_sheet01.py -k '3a'",
+    "input": "",
+    "output": "",
+    "comparison": "included",
+    "timeout": 10,
+    "points": 10
+  },
+  {
+    "name": "Exercise 3 - Programming assignment: item b",
+    "setup": "",
+    "run": "pytest -s --no-header --tb=no ./tests/test_exercise_sheet01.py -k '3b'",
+    "input": "",
+    "output": "",
+    "comparison": "included",
+    "timeout": 10,
+    "points": 10
+  },
+  {
+    "name": "Exercise 3 - Programming assignment: item c",
+    "setup": "",
+    "run": "pytest -s --no-header --tb=no ./tests/test_exercise_sheet01.py -k '3c'",
+    "input": "",
+    "output": "",
+    "comparison": "included",
+    "timeout": 10,
+    "points": 20
+  },
+  {
+    "name": "Exercise 3 - Programming assignment: item d",
+    "setup": "",
+    "run": "pytest -s --no-header --tb=no ./tests/test_exercise_sheet01.py -k '3d'",
+    "input": "",
+    "output": "",
+    "comparison": "included",
+    "timeout": 10,
+    "points": 20
+  },
+  {
+    "name": "Exercise 3 - Programming assignment: item e",
+    "setup": "",
+    "run": "pytest -s --no-header --tb=no ./tests/test_exercise_sheet01.py -k '3e'",
+    "input": "",
+    "output": "",
+    "comparison": "included",
+    "timeout": 10,
+    "points": 20
+  },
+  {
+    "name": "Exercise 3 - Programming assignment: item f",
+    "setup": "",
+    "run": "pytest -s --no-header --tb=no ./tests/test_exercise_sheet01.py -k '3f'",
+    "input": "",
+    "output": "",
+    "comparison": "included",
+    "timeout": 10,
+    "points": 20
+  }
+  ]
+}
