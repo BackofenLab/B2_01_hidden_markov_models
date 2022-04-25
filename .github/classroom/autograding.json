@@ -3,7 +3,7 @@
   {
     "name": "Exercise 3 - Programming assignment: item a",
     "setup": "",
-    "run": "pytest -s --no-header --tb=no ./tests/test_exercise_sheet01.py -k '3a'",
+    "run": "pytest -s --no-header --tb=no ./tests/test_exercise_sheet1.py -k '3a'",
     "input": "",
     "output": "",
     "comparison": "included",
@@ -13,7 +13,7 @@
   {
     "name": "Exercise 3 - Programming assignment: item b",
     "setup": "",
-    "run": "pytest -s --no-header --tb=no ./tests/test_exercise_sheet01.py -k '3b'",
+    "run": "pytest -s --no-header --tb=no ./tests/test_exercise_sheet1.py -k '3b'",
     "input": "",
     "output": "",
     "comparison": "included",
@@ -23,7 +23,7 @@
   {
     "name": "Exercise 3 - Programming assignment: item c",
     "setup": "",
-    "run": "pytest -s --no-header --tb=no ./tests/test_exercise_sheet01.py -k '3c'",
+    "run": "pytest -s --no-header --tb=no ./tests/test_exercise_sheet1.py -k '3c'",
     "input": "",
     "output": "",
     "comparison": "included",
@@ -33,7 +33,7 @@
   {
     "name": "Exercise 3 - Programming assignment: item d",
     "setup": "",
-    "run": "pytest -s --no-header --tb=no ./tests/test_exercise_sheet01.py -k '3d'",
+    "run": "pytest -s --no-header --tb=no ./tests/test_exercise_sheet1.py -k '3d'",
     "input": "",
     "output": "",
     "comparison": "included",
@@ -43,7 +43,7 @@
   {
     "name": "Exercise 3 - Programming assignment: item e",
     "setup": "",
-    "run": "pytest -s --no-header --tb=no ./tests/test_exercise_sheet01.py -k '3e'",
+    "run": "pytest -s --no-header --tb=no ./tests/test_exercise_sheet1.py -k '3e'",
     "input": "",
     "output": "",
     "comparison": "included",
@@ -53,7 +53,7 @@
   {
     "name": "Exercise 3 - Programming assignment: item f",
     "setup": "",
-    "run": "pytest -s --no-header --tb=no ./tests/test_exercise_sheet01.py -k '3f'",
+    "run": "pytest -s --no-header --tb=no ./tests/test_exercise_sheet1.py -k '3f'",
     "input": "",
     "output": "",
     "comparison": "included",
