@@ -2,6 +2,8 @@
 
 from __future__ import division
 from math import prod
+from tests.implementation import Die
+
 
 # Exercise 3 - Programming Assignment
 #####################################
@@ -41,70 +43,111 @@ For example:
     > casino_dice = [(fair_die, 0.98), (loaded_die, 0.02)]
 """
 
+
 def roll_proba_given_dice(list_dice, roll_value):
     """
-    Exercise 3 a
+    Calculate the probability of obtaining a specific roll value given a list of dice and their corresponding
+    probabilities of being used.
 
-    Implement the function roll_proba_given_die which takes a list of dice and
-    a roll value and returns the probability of the roll. A roll is a single value
-    which can be obtained by throwing a die once.
+    Args:
+    list_dice: A list of tuples. Each tuple consists of a Die object and its probability of being used.
+    roll_value: The roll value for which the probability is being calculated.
+
+    Returns:
+    float: The probability of obtaining the specified roll value.
     """
+
     roll_proba = None
     return roll_proba
 
+
 def observation_given_die(die, observation):
     """
-    Exercise 3 b
-
-    Implement the function prob_observ_given_die which using the list of
-    dice and an observation and returns the probability of the observation.
+    Calculate the probability of a given observation (sequence of rolls) for a specific die.
+    
+    Args:
+    die: A Die object.
+    observation: A list of integers representing a sequence of rolls.
+    
+    Returns:
+    float: The probability of the given observation for the specified die.
     """
+
     observation_proba = None
     return observation_proba
 
 
 def proba_of_dice_given_observation(list_dice, observation):
     """
-    Exercise 3 c
-
-    Implement the function proba_of_dice_given_observation which takes a list of
-    dice and an observation and returns the probability for each die to be used to
-    have the corresponding outcome.
+    Calculate the probability of each die being used, given a list of dice and an observation.
+    
+    Args:
+    list_dice: A list of tuples. Each tuple consists of a Die object and its probability of being used.
+    observation: A list of integers representing a sequence of rolls.
+    
+    Returns:
+    list: A list of probabilities for each die to have produced the given observation.
     """
+
     list_dice_proba = None
     return list_dice_proba
 
+
 def state_sequence_probability_computation(list_dice, state_sequence, transition_matrix):
     """
-    Exercise 3 d
-
-    Implement the function state_sequence_probability_computation which takes a
-    list of dice, a state sequence and the corresponding transition matrix for
-    the given dice and returns the probability of the state sequence.
+    Calculate the probability of a state sequence given a list of dice, the state sequence, and the
+    corresponding transition matrix.
+    
+    Args:
+    list_dice: A list of tuples. Each tuple consists of a Die object and its probability of being used.
+    state_sequence: A list of integers representing a sequence of states.
+    transition_matrix: A 2D list representing the transition probabilities between states.
+    
+    Returns:
+    float: The probability of the given state sequence.
     """
+
     state_sequence_probability = None
     return state_sequence_probability
 
 
 def observation_probability_computation_given_state_sequence(list_dice, observation, state_sequence):
     """
-    Exercise 3 e
-
-    Implement the function state_sequence_probability_computation which takes a
-    list of dice, a state sequence and the corresponding transition matrix for
-    the given dice and returns the probability of the state sequence.
+    Calculate the probability of an observation given a list of dice, the observation, and a state sequence.
+    
+    Args:
+    list_dice: A list of tuples. Each tuple consists of a Die object and its probability of being used.
+    observation: A list of integers representing a sequence of rolls.
+    state_sequence: A list of integers representing a sequence of states.
+    
+    Returns:
+    float: The probability of the given observation for the specified state sequence.
     """
+
     observation_probability = None
     return observation_probability
 
+
 def observation_state_sequence_joint_probability_computation(list_dice, observation, state_sequence, transition_matrix):
     """
-    Exercise 3 f
-
-    Implement the function observation_state_joint_probability which takes
-    a list of dice, an observation, a state sequence and a transition matrix, and return the joint
-    probability of the observation and the state sequence.
+    Calculate the joint probability of an observation and a state sequence given a list of dice, the observation,
+    the state sequence, and the corresponding transition matrix.
+    
+    Args:
+    list_dice: A list of tuples. Each tuple consists of a Die object and its probability of being used.
+    observation: A list of integers representing a sequence of rolls.
+    state_sequence: A list of integers representing a sequence of states.
+    transition_matrix: A 2D list representing the transition probabilities between states.
+    
+    Returns:
+    float: The joint probability of the given observation and state sequence.
     """
+
     state_sequence_proba = None
-    obserbation_proba = None
-    return None #state_sequence_proba * observation_proba
+    observation_proba = None
+    return None # state_sequence_proba * observation_proba
+
+
+if __name__ == "__main__":
+    d = Die(0.5, 0.5)
+    print(d)

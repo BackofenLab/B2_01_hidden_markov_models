@@ -56,10 +56,17 @@ casino_dice = [(fair_die, 0.98), (loaded_die, 0.02)]
 
 </details>
 
-**b)** Implement the function `observation_given_die` which takes a `list of dice` and an `observation` and returns the `probability of the observation`.
+**b)** Implement the function `observation_given_die` which takes `a die` and an `observation` and returns the `probability of the observation`.
 
 <details>
   <summary>Example: (Spoiler)</summary>
+
+  ```
+   >>> die = Die(1/6, 1/6, 1/6, 1/6, 1/6, 1/6)
+   >>> observation = [1, 3, 2, 1, 5, 6, 4]
+   >>> observation_given_die(die, observation)
+  3.5722450845907626e-06
+  ```
 
 </details>
 
@@ -68,12 +75,35 @@ casino_dice = [(fair_die, 0.98), (loaded_die, 0.02)]
 <details>
   <summary>Example: (Spoiler)</summary>
 
+  ```
+   >>> fair_die = Die(1/6, 1/6, 1/6, 1/6, 1/6, 1/6)
+   >>> probability_fair = 0.4
+   >>> loaded_die = Die(1/12, 1/12, 1/12, 1/12, 1/12, 7/12)
+   >>> probability_loaded = 0.6
+   >>> casino_dice = [(fair_die, probability_fair), (loaded_die, probability_loaded)]
+   >>> observation = [1, 2, 3]
+   >>> proba_of_dice_given_observation(casino_dice, observation)
+  [0.8421052631578947, 0.15789473684210523]
+  ```
+
 </details>
 
 **d)** Implement the function `state_sequence_probability_computation` which takes a `list of dice`, a `state sequence` and the corresponding `transition matrix` for the given dice and returns the `probability of the state sequence`.
 
 <details>
   <summary>Example: (Spoiler)</summary>
+
+  ```
+   >>> fair_die = Die(1/6, 1/6, 1/6, 1/6, 1/6, 1/6)
+   >>> probability_fair = 0.4
+   >>> loaded_die = Die(1/12, 1/12, 1/12, 1/12, 1/12, 7/12)
+   >>> probability_loaded = 0.6
+   >>> casino_dice = [(fair_die, probability_fair), (loaded_die, probability_loaded)]
+   >>> transition = [[0.1, 0.9], [0.2, 0.8]]
+   >>> state_sequence = [0, 1, 0, 1, 0, 0]
+   >>> state_sequence_probability_computation(casino_dice, state_sequence,transition)
+  0.0012960000000000003
+  ```
 
 </details>
 
@@ -82,11 +112,36 @@ casino_dice = [(fair_die, 0.98), (loaded_die, 0.02)]
 <details>
   <summary>Example: (Spoiler)</summary>
 
+  ```
+   >>> fair_die = Die(1/6, 1/6, 1/6, 1/6, 1/6, 1/6)
+   >>> probability_fair = 0.4
+   >>> loaded_die = Die(1/12, 1/12, 1/12, 1/12, 1/12, 7/12)
+   >>> probability_loaded = 0.6
+   >>> casino_dice = [(fair_die, probability_fair), (loaded_die, probability_loaded)]
+   >>> observation = [1, 2, 3, 2, 5, 3, 5]
+   >>> state_sequence = [0, 1, 0, 1, 0, 0]
+   >>> observation_probability_computation_given_state_sequence(casino_dice, observation,state_sequence)
+  5.358367626886144e-06
+  ```
+
 </details>
 
 **f)** Implement the function `observation_state_sequence_joint_probability_computation` which takes a `list of dice`, an `observation`, a `state sequence` and a `transition matrix` and return the joint probability of the observation and the state sequence.
 
 <details>
   <summary>Example: (Spoiler)</summary>
+
+  ```
+  >>> fair_die = Die(1/6, 1/6, 1/6, 1/6, 1/6, 1/6)
+  >>> probability_fair = 0.4
+  >>> loaded_die = Die(1/12, 1/12, 1/12, 1/12, 1/12, 7/12)
+  >>> probability_loaded = 0.6
+  >>> casino_dice = [(fair_die,probability_fair), (loaded_die,probability_loaded)]
+  >>> observation = [1, 2, 3, 2, 5, 3, 5]
+  >>> state_sequence = [0, 1, 0, 1, 0, 0]
+  >>> transition = [[0.1, 0.9], [0.2, 0.8]]
+  >>> observation_state_sequence_joint_probability_computation(casino_dice, observation,state_sequence,transition)
+  6.944444444444444e-09
+  ```
 
 </details>

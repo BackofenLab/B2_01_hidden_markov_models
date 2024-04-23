@@ -2,189 +2,78 @@ from __future__ import division
 from math import isclose, prod
 import pytest
 from random import seed, uniform, randint, shuffle, choices
-from helpers.helpers import *
-from exercise_sheet1 import *
-
-seed(10)
-
-N_TESTS = 10
-LOAD_PROBABILITIES = [1 / 10, 1 / 10, 1 / 10, 2 / 10, 2 / 10, 3 / 10]
-
-
-def test_exercise_3a():
-    """
-    For details check README.
-    """
-    for i in range(N_TESTS):
-        shuffle(LOAD_PROBABILITIES)
-        fair_die = Die(1 / 6, 1 / 6, 1 / 6, 1 / 6, 1 / 6, 1 / 6)
-        loaded_die = Die(*LOAD_PROBABILITIES)
-        probability_loaded = uniform(0.1, 0.9)
-        probability_fair = 1 - probability_loaded
-        casino_dice = [(fair_die, probability_fair), (loaded_die, probability_loaded)]
-        roll = randint(1, 6)
-        response = roll_proba_given_dice(casino_dice, roll)
-        solution = roll_proba_given_dice_correct(casino_dice, roll)
-        if response is None:
-            print("[x] It seems that you haven't implemented the function!")
-            break
-        if solution != response:
-            print("[x] It seems that your implementation is wrong.")
-            print("\t[o] Probability fair: {}".format(probability_fair))
-            print("\t[o] Probability loaded: {}".format(probability_loaded))
-            print("\t[o] Roll: {}".format(roll))
-            print("\t\t[-] Your result: {}".format(response))
-            print("\t\t[+] Correct value: {}".format(solution))
-        assert response == solution
+from implementation import (Die, 
+                            roll_proba_given_dice_correct, 
+                            observation_given_die_correct, 
+                            proba_of_dice_given_observation_correct,
+                            state_sequence_probability_computation_correct,
+                            observation_probability_computation_given_state_sequence_correct, 
+                            observation_state_sequence_joint_probability_computation_correct)
+                            
+from exercise_sheet1 import  (roll_proba_given_dice, 
+                              observation_given_die, 
+                              proba_of_dice_given_observation,
+                              state_sequence_probability_computation,
+                              observation_probability_computation_given_state_sequence, 
+                              observation_state_sequence_joint_probability_computation)
 
 
-def test_exercise_3b():
-    """
-    For details check README.
-    """
-    for i in range(N_TESTS):
-        shuffle(LOAD_PROBABILITIES)
-        die = Die(*LOAD_PROBABILITIES)
-        observation = [randint(1, 6) for x in range(randint(1, 20))]
-        response = observation_given_die(die, observation)
-        solution = observation_given_die_correct(die, observation)
-        if response is None:
-            print("[x] It seems that you haven't implemented the function!")
-            break
-        if solution != response:
-            print("[x] It seems that your implementation is wrong.")
-            print("\t[o] Die probabilities: {}".format(LOAD_PROBABILITIES))
-            print("\t[o] Observation: {}".format(observation))
-            print("\t\t[-] Your result: {}".format(response))
-            print("\t\t[+] Correct value: {}".format(solution))
-        assert response == solution
+dice_data = [
+    [(Die(1/6, 1/6, 1/6, 1/6, 1/6, 1/6), 0.8), (Die(0.1, 0.1, 0.1, 0.1, 0.1, 0.5), 0.2)],
+]
 
+roll_values = [1, 2, 3, 4, 5, 6]
 
-def test_exercise_3c():
-    """
-    For details check README.
-    """
-    for i in range(N_TESTS):
-        shuffle(LOAD_PROBABILITIES)
-        fair_die = Die(1 / 6, 1 / 6, 1 / 6, 1 / 6, 1 / 6, 1 / 6)
-        loaded_die = Die(*LOAD_PROBABILITIES)
-        probability_loaded = uniform(0.1, 0.9)
-        probability_fair = 1 - probability_loaded
-        casino_dice = [(fair_die, probability_fair), (loaded_die, probability_loaded)]
-        observation = [randint(1, 6) for x in range(randint(1, 20))]
-        response = proba_of_dice_given_observation(casino_dice, observation)
-        solution = proba_of_dice_given_observation_correct(casino_dice, observation)
-        if response is None:
-            print("[x] It seems that you haven't implemented the function!")
-            break
-        if solution != response:
-            print("[x] It seems that your implementation is wrong.")
-            print("\t[o] Loaded die probabilities: {}".format(LOAD_PROBABILITIES))
-            print("\t[o] Probability picking loaded die: {}".format(probability_loaded))
-            print("\t[o] Observation: {}".format(observation))
-            print("\t\t[-] Your result: {}".format(response))
-            print("\t\t[+] Correct value: {}".format(solution))
-        assert response == solution
+observations = [
+    [1, 2, 3, 4, 5, 6],
+    [6, 5, 4, 3, 2, 1],
+]
 
+state_sequences = [
+    [0, 0, 0, 0, 0, 0],
+    [1, 1, 1, 1, 1, 1],
+]
 
-def test_exercise_3d():
-    """
-    For details check README.
-    """
-    for i in range(N_TESTS):
-        shuffle(LOAD_PROBABILITIES)
-        fair_die = Die(1 / 6, 1 / 6, 1 / 6, 1 / 6, 1 / 6, 1 / 6)
-        loaded_die = Die(*LOAD_PROBABILITIES)
-        probability_loaded = uniform(0.1, 0.9)
-        probability_fair = 1 - probability_loaded
-        casino_dice = [(fair_die, probability_fair), (loaded_die, probability_loaded)]
-        t1, t2 = uniform(0.1, 0.9), uniform(0.1, 0.9)
-        transition = [(t1, 1 - t1), (t2, 1 - t2)]
-        state_sequence = "".join(choices(["0", "1"], k=randint(2, 10)))
-        response = state_sequence_probability_computation(
-            casino_dice, state_sequence, transition
-        )
-        solution = state_sequence_probability_computation_correct(
-            casino_dice, state_sequence, transition
-        )
-        if response is None:
-            print("[x] It seems that you haven't implemented the function!")
-            break
-        if solution != response:
-            print("[x] It seems that your implementation is wrong.")
-            print("\t[o] Loaded die probabilities: {}".format(LOAD_PROBABILITIES))
-            print("\t[o] Probability picking loaded die: {}".format(probability_loaded))
-            print("\t[o] Transition matrix: {}".format(transition))
-            print("\t[o] State sequence: {}".format(state_sequence))
-            print("\t\t[-] Your result: {}".format(response))
-            print("\t\t[+] Correct value: {}".format(solution))
-        assert response == solution
+transition_matrix = [
+    [0.99, 0.01],
+    [0.03, 0.97],
+]
 
+# Tests
 
-def test_exercise_3e():
-    """
-    For details check README.
-    """
-    for i in range(N_TESTS):
-        shuffle(LOAD_PROBABILITIES)
-        fair_die = Die(1 / 6, 1 / 6, 1 / 6, 1 / 6, 1 / 6, 1 / 6)
-        loaded_die = Die(*LOAD_PROBABILITIES)
-        probability_loaded = uniform(0.1, 0.9)
-        probability_fair = 1 - probability_loaded
-        casino_dice = [(fair_die, probability_fair), (loaded_die, probability_loaded)]
-        observation = [randint(1, 6) for x in range(randint(1, 20))]
-        state_sequence = "".join(choices(["0", "1"], k=randint(2, 10)))
-        response = observation_probability_computation_given_state_sequence(
-            casino_dice, observation, state_sequence
-        )
-        solution = observation_probability_computation_given_state_sequence_correct(
-            casino_dice, observation, state_sequence
-        )
-        if response is None:
-            print("[x] It seems that you haven't implemented the function!")
-            break
-        if solution != response:
-            print("[x] It seems that your implementation is wrong.")
-            print("\t[o] Loaded die probabilities: {}".format(LOAD_PROBABILITIES))
-            print("\t[o] Probability picking loaded die: {}".format(probability_loaded))
-            print("\t[o] Observation: {}".format(observation))
-            print("\t[o] State sequence: {}".format(state_sequence))
-            print("\t\t[-] Your result: {}".format(response))
-            print("\t\t[+] Correct value: {}".format(solution))
-        assert response == solution
+@pytest.mark.parametrize("list_dice,roll_value", [(d, rv) for d in dice_data for rv in roll_values])
+def test_roll_proba_given_dice(list_dice, roll_value):
+    expected = roll_proba_given_dice_correct(list_dice, roll_value)
+    result = roll_proba_given_dice(list_dice, roll_value)
+    assert result == expected, f"Expected {expected}, but got {result}"
 
+@pytest.mark.parametrize("die,observation", [(d[0][0], obs) for d in dice_data for obs in observations])
+def test_observation_given_die(die, observation):
+    expected = observation_given_die_correct(die, observation)
+    result = observation_given_die(die, observation)
+    assert result == expected, f"Expected {expected}, but got {result}"
 
-def test_exercise_3f():
-    """
-    For details check README.
-    """
-    for i in range(N_TESTS):
-        shuffle(LOAD_PROBABILITIES)
-        fair_die = Die(1 / 6, 1 / 6, 1 / 6, 1 / 6, 1 / 6, 1 / 6)
-        loaded_die = Die(*LOAD_PROBABILITIES)
-        probability_loaded = uniform(0.1, 0.9)
-        probability_fair = 1 - probability_loaded
-        casino_dice = [(fair_die, probability_fair), (loaded_die, probability_loaded)]
-        observation = [randint(1, 6) for x in range(randint(1, 20))]
-        state_sequence = "".join(choices(["0", "1"], k=randint(2, 10)))
-        t1, t2 = uniform(0.1, 0.9), uniform(0.1, 0.9)
-        transition = [(t1, 1 - t1), (t2, 1 - t2)]
+@pytest.mark.parametrize("list_dice,observation", [(d, obs) for d in dice_data for obs in observations])
+def test_proba_of_dice_given_observation(list_dice, observation):
+    expected = proba_of_dice_given_observation_correct(list_dice, observation)
+    result = proba_of_dice_given_observation(list_dice, observation)
+    assert result == expected, f"Expected {expected}, but got {result}"
 
-        response = observation_state_sequence_joint_probability_computation(
-            casino_dice, observation, state_sequence, transition
-        )
-        solution = observation_state_sequence_joint_probability_computation_correct(
-            casino_dice, observation, state_sequence, transition
-        )
-        if response is None:
-            print("[x] It seems that you haven't implemented the function!")
-            break
-        if solution != response:
-            print("[x] It seems that your implementation is wrong.")
-            print("\t[o] Loaded die probabilities: {}".format(LOAD_PROBABILITIES))
-            print("\t[o] Probability picking loaded die: {}".format(probability_loaded))
-            print("\t[o] Observation: {}".format(observation))
-            print("\t[o] State sequence: {}".format(state_sequence))
-            print("\t\t[-] Your result: {}".format(response))
-            print("\t\t[+] Correct value: {}".format(solution))
-        assert response == solution
+@pytest.mark.parametrize("list_dice,state_sequence,transition_matrix", [(d, ss, transition_matrix) for d in dice_data for ss in state_sequences])
+def test_state_sequence_probability_computation(list_dice, state_sequence, transition_matrix):
+    expected = state_sequence_probability_computation_correct(list_dice, state_sequence, transition_matrix)
+    result = state_sequence_probability_computation(list_dice, state_sequence, transition_matrix)
+    assert result == expected, f"Expected {expected}, but got {result}"
+
+@pytest.mark.parametrize("list_dice,observation,state_sequence", [(d, obs, ss) for d in dice_data for obs in observations for ss in state_sequences])
+def test_observation_probability_computation_given_state_sequence(list_dice, observation, state_sequence):
+    expected = observation_probability_computation_given_state_sequence_correct(list_dice, observation, state_sequence)
+    result = observation_probability_computation_given_state_sequence(list_dice, observation, state_sequence)
+    assert result == expected, f"Expected {expected}, but got {result}"
+    
+@pytest.mark.parametrize("list_dice,observation,state_sequence,transition_matrix", [(d, obs, ss, transition_matrix) 
+                                                                                    for d in dice_data for obs in observations for ss in state_sequences])
+def test_observation_state_sequence_joint_probability_computation(list_dice, observation, state_sequence, transition_matrix):
+    expected = observation_state_sequence_joint_probability_computation_correct(list_dice, observation, state_sequence, transition_matrix)
+    result = observation_state_sequence_joint_probability_computation(list_dice, observation, state_sequence, transition_matrix)
+    assert result == expected, f"Expected {expected}, but got {result}"
