@@ -42,38 +42,38 @@ transition_matrix = [
 # Tests
 
 @pytest.mark.parametrize("list_dice,roll_value", [(d, rv) for d in dice_data for rv in roll_values])
-def test_roll_proba_given_dice(list_dice, roll_value):
+def test_roll_proba_given_dice_3a(list_dice, roll_value):
     expected = roll_proba_given_dice_correct(list_dice, roll_value)
     result = roll_proba_given_dice(list_dice, roll_value)
     assert result == expected, f"Expected {expected}, but got {result}"
 
 @pytest.mark.parametrize("die,observation", [(d[0][0], obs) for d in dice_data for obs in observations])
-def test_observation_given_die(die, observation):
+def test_observation_given_die_3b(die, observation):
     expected = observation_given_die_correct(die, observation)
     result = observation_given_die(die, observation)
     assert result == expected, f"Expected {expected}, but got {result}"
 
 @pytest.mark.parametrize("list_dice,observation", [(d, obs) for d in dice_data for obs in observations])
-def test_proba_of_dice_given_observation(list_dice, observation):
+def test_proba_of_dice_given_observation_3c(list_dice, observation):
     expected = proba_of_dice_given_observation_correct(list_dice, observation)
     result = proba_of_dice_given_observation(list_dice, observation)
     assert result == expected, f"Expected {expected}, but got {result}"
 
 @pytest.mark.parametrize("list_dice,state_sequence,transition_matrix", [(d, ss, transition_matrix) for d in dice_data for ss in state_sequences])
-def test_state_sequence_probability_computation(list_dice, state_sequence, transition_matrix):
+def test_state_sequence_probability_computation_3d(list_dice, state_sequence, transition_matrix):
     expected = state_sequence_probability_computation_correct(list_dice, state_sequence, transition_matrix)
     result = state_sequence_probability_computation(list_dice, state_sequence, transition_matrix)
     assert result == expected, f"Expected {expected}, but got {result}"
 
 @pytest.mark.parametrize("list_dice,observation,state_sequence", [(d, obs, ss) for d in dice_data for obs in observations for ss in state_sequences])
-def test_observation_probability_computation_given_state_sequence(list_dice, observation, state_sequence):
+def test_observation_probability_computation_given_state_sequence_3e(list_dice, observation, state_sequence):
     expected = observation_probability_computation_given_state_sequence_correct(list_dice, observation, state_sequence)
     result = observation_probability_computation_given_state_sequence(list_dice, observation, state_sequence)
     assert result == expected, f"Expected {expected}, but got {result}"
     
 @pytest.mark.parametrize("list_dice,observation,state_sequence,transition_matrix", [(d, obs, ss, transition_matrix) 
                                                                                     for d in dice_data for obs in observations for ss in state_sequences])
-def test_observation_state_sequence_joint_probability_computation(list_dice, observation, state_sequence, transition_matrix):
+def test_observation_state_sequence_joint_probability_computation_3f(list_dice, observation, state_sequence, transition_matrix):
     expected = observation_state_sequence_joint_probability_computation_correct(list_dice, observation, state_sequence, transition_matrix)
     result = observation_state_sequence_joint_probability_computation(list_dice, observation, state_sequence, transition_matrix)
     assert result == expected, f"Expected {expected}, but got {result}"
